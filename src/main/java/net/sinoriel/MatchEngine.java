@@ -14,18 +14,9 @@ public class MatchEngine {
     private Integer localGoals;
     private Integer visitorGoals;
     private String summary;
+    private Match match;
 
 
-    public Integer getLocalGoals() {
-        return localGoals;
-    }
-    public Integer getVisitorGoals() {
-        return visitorGoals;
-    }
-
-    public String getSummary() {
-        return summary;
-    }
 
     public enum MatchResult {
         LOCAL_WINS,
@@ -52,9 +43,26 @@ public class MatchEngine {
         }
         summary = localGoals+"-"+visitorGoals;
 
+        match = new Match();
+
+    }
+
+    public Integer getLocalGoals() {
+        return localGoals;
+    }
+    public Integer getVisitorGoals() {
+        return visitorGoals;
+    }
+
+    public String getSummary() {
+        return summary;
     }
 
     public MatchResult getResult() {
         return result;
+    }
+
+    public Match getMatch() {
+        return match;
     }
 }

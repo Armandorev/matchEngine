@@ -53,4 +53,10 @@ public class MatchEngineApplicationTests {
         Assert.assertThat(matchEngine.getSummary(),Matchers.instanceOf(String.class));
         Assert.assertThat(matchEngine.getSummary(),Matchers.equalTo(localGoals+"-"+visitorGoals));
     }
+
+    @Test
+    public void matchEngineReturnsMatchWhenGenerated() {
+        Assert.assertThat(matchEngine.getMatch(),Matchers.instanceOf(Match.class));
+    }
+
 }
